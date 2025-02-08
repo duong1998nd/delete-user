@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xóa Dữ Liệu Người Dùng</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #d9534f;
+    }
+    p {
+      margin: 10px 0;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #d9534f;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #c9302c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Xóa Dữ Liệu Người Dùng</h1>
+    <p>Chúng tôi cam kết bảo mật thông tin của bạn. Nếu bạn muốn yêu cầu xóa dữ liệu cá nhân, vui lòng điền thông tin dưới đây:</p>
+    <form action="/delete-user-data" method="POST">
+      <input type="text" name="fullname" placeholder="Họ và Tên" required>
+      <input type="email" name="email" placeholder="Email Đăng Ký" required>
+      <textarea name="reason" placeholder="Lý do yêu cầu xóa dữ liệu (tuỳ chọn)" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin: 10px 0;"></textarea>
+      <button type="submit">Gửi Yêu Cầu</button>
+    </form>
+  </div>
+</body>
+</html>
